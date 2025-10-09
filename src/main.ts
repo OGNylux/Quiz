@@ -4,6 +4,13 @@ import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalo
 
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
+import { addIcons } from 'ionicons';
+import { addCircleOutline, checkmark } from 'ionicons/icons';
+
+addIcons({
+  'add-circle-outline': addCircleOutline,
+  'checkmark': checkmark
+});
 
 bootstrapApplication(AppComponent, {
   providers: [
