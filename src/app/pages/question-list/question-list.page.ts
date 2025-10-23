@@ -25,6 +25,7 @@ export class QuestionListPage implements OnInit {
   }
 
   ngOnInit() {
+    //this.data.addSampleQuestions();
   }
 
 }

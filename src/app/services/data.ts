@@ -15,15 +15,6 @@ export class Data {
   };
 
   constructor() {
-    // this.currentQuiz.questions.push({
-    //   id: 'q1',
-    //   title: 'What is the capital of France?',
-    //   a1: 'Berlin',
-    //   a2: 'Madrid',
-    //   a3: 'Paris',
-    //   a4: 'Rome',
-    //   correct: 3
-    // });
     this.loadQuiz()
   }
   
@@ -37,6 +28,10 @@ export class Data {
       key: 'it251511_mobile_2025_quiz',
       value: JSON.stringify(this.currentQuiz)
     });
+  }
+
+  public getAllQuestions(): Question[] {
+    return this.currentQuiz.questions;
   }
 
   public getQuestionById(id: string): Question {
@@ -61,4 +56,25 @@ export class Data {
     this.saveQuiz();
   }
 
+  deleteQuestion(id: string) {
+    this.currentQuiz.questions = this.currentQuiz.questions.filter(q => q.id !== id);
+    this.saveQuiz();
+  }
+
+  deleteAllQuestions() {
+    this.currentQuiz.questions = [];
+    this.saveQuiz();
+  }
+
+  addSampleQuestions() {
+    fetch('assets/questions.json')
+      .then(response => response.json())
+      .then((data: Question[]) => {
+        data.forEach(q => q.id = uuidv4());
+        
+        this.deleteAllQuestions();
+        this.currentQuiz.questions.push(...data);
+        this.saveQuiz();
+      });
+  }
 }

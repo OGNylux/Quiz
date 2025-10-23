@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "title": "What is the capital city of France?",
+    "a1": "Berlin",
+    "a2": "Madrid",
+    "a3": "Paris",
+    "a4": "Rome",
+    "correct": 3
+  },
+  {
+    "id": 2,
+    "title": "Which planet is known as the Red Planet?",
+    "a1": "Venus",
+    "a2": "Mars",
+    "a3": "Jupiter",
+    "a4": "Saturn",
+    "correct": 2
+  },
+  {
+    "id": 3,
+    "title": "What is 7 x 8?",
+    "a1": "54",
+    "a2": "56",
+    "a3": "64",
+    "a4": "48",
+    "correct": 2
+  },
+  {
+    "id": 4,
+    "title": "Who wrote the play 'Romeo and Juliet'?",
+    "a1": "William Shakespeare",
+    "a2": "Charles Dickens",
+    "a3": "Jane Austen",
+    "a4": "Mark Twain",
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "title": "Which element has the chemical symbol 'O'?",
+    "a1": "Gold",
+    "a2": "Oxygen",
+    "a3": "Osmium",
+    "a4": "Iron",
+    "correct": 2
+  },
+  {
+    "id": 6,
+    "title": "What year did the first man land on the Moon?",
+    "a1": "1965",
+    "a2": "1969",
+    "a3": "1972",
+    "a4": "1959",
+    "correct": 2
+  },
+  {
+    "id": 7,
+    "title": "Which language is primarily spoken in Brazil?",
+    "a1": "Spanish",
+    "a2": "Portuguese",
+    "a3": "French",
+    "a4": "English",
+    "correct": 2
+  },
+  {
+    "id": 8,
+    "title": "What is the largest mammal on Earth?",
+    "a1": "African Elephant",
+    "a2": "Blue Whale",
+    "a3": "Giraffe",
+    "a4": "Hippopotamus",
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "title": "In computing, what does 'HTTP' stand for?",
+    "a1": "HyperText Transfer Protocol",
+    "a2": "Hyperlink Transfer Program",
+    "a3": "HighText Transfer Protocol",
+    "a4": "HyperText Transmission Process",
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "title": "What is the boiling point of water at sea level in Celsius?",
+    "a1": "90°C",
+    "a2": "95°C",
+    "a3": "100°C",
+    "a4": "105°C",
+    "correct": 3
+  },
+  {
+    "id": 11,
+    "title": "Who painted the Mona Lisa?",
+    "a1": "Vincent van Gogh",
+    "a2": "Pablo Picasso",
+    "a3": "Leonardo da Vinci",
+    "a4": "Claude Monet",
+    "correct": 3
+  },
+  {
+    "id": 12,
+    "title": "Which organ pumps blood through the body?",
+    "a1": "Liver",
+    "a2": "Lungs",
+    "a3": "Heart",
+    "a4": "Kidneys",
+    "correct": 3
+  },
+  {
+    "id": 13,
+    "title": "Which country hosted the 2016 Summer Olympics?",
+    "a1": "China",
+    "a2": "Brazil",
+    "a3": "United Kingdom",
+    "a4": "Russia",
+    "correct": 2
+  },
+  {
+    "id": 14,
+    "title": "What gas do plants absorb from the atmosphere during photosynthesis?",
+    "a1": "Oxygen",
+    "a2": "Nitrogen",
+    "a3": "Carbon dioxide",
+    "a4": "Hydrogen",
+    "correct": 3
+  },
+  {
+    "id": 15,
+    "title": "Which is the smallest prime number?",
+    "a1": "0",
+    "a2": "1",
+    "a3": "2",
+    "a4": "3",
+    "correct": 3
+  },
+  {
+    "id": 16,
+    "title": "Which country is known for the maple leaf symbol?",
+    "a1": "Canada",
+    "a2": "Australia",
+    "a3": "Switzerland",
+    "a4": "Japan",
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "title": "What is the chemical formula for table salt?",
+    "a1": "KCl",
+    "a2": "NaCl",
+    "a3": "CaCO3",
+    "a4": "H2O",
+    "correct": 2
+  },
+  {
+    "id": 18,
+    "title": "Who is the author of '1984'?",
+    "a1": "George Orwell",
+    "a2": "Aldous Huxley",
+    "a3": "J.R.R. Tolkien",
+    "a4": "Ernest Hemingway",
+    "correct": 1
+  },
+  {
+    "id": 19,
+    "title": "Which sport uses a racket and a shuttlecock?",
+    "a1": "Tennis",
+    "a2": "Badminton",
+    "a3": "Squash",
+    "a4": "Table Tennis",
+    "correct": 2
+  },
+  {
+    "id": 20,
+    "title": "What is the freezing point of water in Fahrenheit?",
+    "a1": "0°F",
+    "a2": "32°F",
+    "a3": "100°F",
+    "a4": "212°F",
+    "correct": 2
+  },
+  {
+    "id": 21,
+    "title": "Which element is required for the formation of hemoglobin?",
+    "a1": "Calcium",
+    "a2": "Iron",
+    "a3": "Potassium",
+    "a4": "Zinc",
+    "correct": 2
+  },
+  {
+    "id": 22,
+    "title": "What is the largest continent by land area?",
+    "a1": "Africa",
+    "a2": "Asia",
+    "a3": "North America",
+    "a4": "Antarctica",
+    "correct": 2
+  },
+  {
+    "id": 23,
+    "title": "Which fictional detective lived at 221B Baker Street?",
+    "a1": "Hercule Poirot",
+    "a2": "Sherlock Holmes",
+    "a3": "Miss Marple",
+    "a4": "Philip Marlowe",
+    "correct": 2
+  },
+  {
+    "id": 24,
+    "title": "In music, how many semitones are in an octave?",
+    "a1": "6",
+    "a2": "8",
+    "a3": "12",
+    "a4": "16",
+    "correct": 3
+  },
+  {
+    "id": 25,
+    "title": "Which gas makes up most of the Earth's atmosphere?",
+    "a1": "Oxygen",
+    "a2": "Nitrogen",
+    "a3": "Carbon dioxide",
+    "a4": "Argon",
+    "correct": 2
+  },
+  {
+    "id": 26,
+    "title": "Which programming language is commonly used for web front-end development?",
+    "a1": "Python",
+    "a2": "JavaScript",
+    "a3": "C++",
+    "a4": "Go",
+    "correct": 2
+  },
+  {
+    "id": 27,
+    "title": "Who discovered penicillin?",
+    "a1": "Alexander Fleming",
+    "a2": "Marie Curie",
+    "a3": "Louis Pasteur",
+    "a4": "Gregor Mendel",
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "title": "What is the square root of 144?",
+    "a1": "10",
+    "a2": "11",
+    "a3": "12",
+    "a4": "13",
+    "correct": 3
+  },
+  {
+    "id": 29,
+    "title": "Which ocean is the deepest in the world?",
+    "a1": "Atlantic Ocean",
+    "a2": "Indian Ocean",
+    "a3": "Pacific Ocean",
+    "a4": "Arctic Ocean",
+    "correct": 3
+  },
+  {
+    "id": 30,
+    "title": "What is the primary ingredient in guacamole?",
+    "a1": "Tomato",
+    "a2": "Avocado",
+    "a3": "Onion",
+    "a4": "Cucumber",
+    "correct": 2
+  },
+  {
+    "id": 31,
+    "title": "Which famous scientist developed the theory of relativity?",
+    "a1": "Isaac Newton",
+    "a2": "Albert Einstein",
+    "a3": "Niels Bohr",
+    "a4": "Galileo Galilei",
+    "correct": 2
+  },
+  {
+    "id": 32,
+    "title": "Which country is home to the Great Barrier Reef?",
+    "a1": "Mexico",
+    "a2": "Australia",
+    "a3": "Thailand",
+    "a4": "South Africa",
+    "correct": 2
+  },
+  {
+    "id": 33,
+    "title": "Which organelle is known as the powerhouse of the cell?",
+    "a1": "Nucleus",
+    "a2": "Ribosome",
+    "a3": "Mitochondrion",
+    "a4": "Golgi apparatus",
+    "correct": 3
+  },
+  {
+    "id": 34,
+    "title": "Which year did World War II end?",
+    "a1": "1945",
+    "a2": "1939",
+    "a3": "1918",
+    "a4": "1950",
+    "correct": 1
+  },
+  {
+    "id": 35,
+    "title": "What is the process by which plants make food using sunlight?",
+    "a1": "Respiration",
+    "a2": "Digestion",
+    "a3": "Photosynthesis",
+    "a4": "Transpiration",
+    "correct": 3
+  },
+  {
+    "id": 36,
+    "title": "Which unit is used to measure electrical resistance?",
+    "a1": "Ampere",
+    "a2": "Volt",
+    "a3": "Ohm",
+    "a4": "Watt",
+    "correct": 3
+  },
+  {
+    "id": 37,
+    "title": "What is the capital of Japan?",
+    "a1": "Tokyo",
+    "a2": "Kyoto",
+    "a3": "Osaka",
+    "a4": "Hiroshima",
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "title": "Which famous ship sank on its maiden voyage in 1912?",
+    "a1": "HMS Beagle",
+    "a2": "Titanic",
+    "a3": "Lusitania",
+    "a4": "Challenger",
+    "correct": 2
+  },
+  {
+    "id": 39,
+    "title": "Which vitamin is produced when skin is exposed to sunlight?",
+    "a1": "Vitamin A",
+    "a2": "Vitamin B12",
+    "a3": "Vitamin C",
+    "a4": "Vitamin D",
+    "correct": 4
+  },
+  {
+    "id": 40,
+    "title": "Which instrument has keys, pedals, and strings?",
+    "a1": "Guitar",
+    "a2": "Violin",
+    "a3": "Piano",
+    "a4": "Saxophone",
+    "correct": 3
+  },
+  {
+    "id": 41,
+    "title": "What is the value of pi (π) rounded to two decimal places?",
+    "a1": "3.12",
+    "a2": "3.14",
+    "a3": "3.16",
+    "a4": "3.18",
+    "correct": 2
+  },
+  {
+    "id": 42,
+    "title": "Which device converts alternating current (AC) to direct current (DC)?",
+    "a1": "Transformer",
+    "a2": "Rectifier",
+    "a3": "Inverter",
+    "a4": "Capacitor",
+    "correct": 2
+  },
+  {
+    "id": 43,
+    "title": "Who is known as the 'Father of Computers' for early mechanical designs?",
+    "a1": "Alan Turing",
+    "a2": "Charles Babbage",
+    "a3": "John von Neumann",
+    "a4": "Steve Jobs",
+    "correct": 2
+  },
+  {
+    "id": 44,
+    "title": "Which city is known as the Big Apple?",
+    "a1": "Los Angeles",
+    "a2": "Chicago",
+    "a3": "New York City",
+    "a4": "San Francisco",
+    "correct": 3
+  },
+  {
+    "id": 45,
+    "title": "What is the chemical symbol for gold?",
+    "a1": "Au",
+    "a2": "Ag",
+    "a3": "Gd",
+    "a4": "Go",
+    "correct": 1
+  },
+  {
+    "id": 46,
+    "title": "Which planet has the most moons (as of 2025)?",
+    "a1": "Earth",
+    "a2": "Mars",
+    "a3": "Saturn",
+    "a4": "Mercury",
+    "correct": 3
+  },
+  {
+    "id": 47,
+    "title": "Which mathematical sequence starts 0, 1, 1, 2, 3, 5, 8... ?",
+    "a1": "Prime numbers",
+    "a2": "Fibonacci sequence",
+    "a3": "Even numbers",
+    "a4": "Factorials",
+    "correct": 2
+  },
+  {
+    "id": 48,
+    "title": "In which country would you find the city of Istanbul?",
+    "a1": "Greece",
+    "a2": "Turkey",
+    "a3": "Bulgaria",
+    "a4": "Egypt",
+    "correct": 2
+  },
+  {
+    "id": 49,
+    "title": "Which blood type is known as the universal donor?",
+    "a1": "AB+",
+    "a2": "O-",
+    "a3": "A+",
+    "a4": "B-",
+    "correct": 2
+  },
+  {
+    "id": 50,
+    "title": "Which social media platform is primarily known for short video content and trends?",
+    "a1": "LinkedIn",
+    "a2": "Twitter (X)",
+    "a3": "TikTok",
+    "a4": "Pinterest",
+    "correct": 3
+  }
+]
