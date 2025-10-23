@@ -31,7 +31,7 @@
     @for (item of data.currentQuiz.questions; track item.id) {
       <ion-item (click)="show(item.id)">
         <ion-label>
-          <h2>Question {{ item.id }}</h2>
+          <h2>Question {{ item.title }}</h2>
           <p>{{ item.title }}</p>
         </ion-label>
       </ion-item>

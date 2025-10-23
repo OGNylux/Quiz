@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonBackButton, IonList, IonItem, IonLabel, IonInput } from '@ionic/angular/standalone';
 import { Data } from 'src/app/services/data';
 import { Question } from 'src/app/services/question';
 import { ActivatedRoute } from '@angular/router';
@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './question.page.html',
   styleUrls: ['./question.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonInput, IonItem, IonList, IonBackButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonLabel]
 })
 export class QuestionPage implements OnInit {
   public data = inject(Data);
@@ -28,6 +28,13 @@ export class QuestionPage implements OnInit {
     } else {
       this.question = this.data.getQuestionById(id);
     }
+  }
+
+  ionViewWillLeave() {
+    if (this.question.id === '0' && this.question.title.length > 2) {
+      this.data.addQuestion(this.question);
+    }
+    this.data.saveQuiz();
   }
 
 }
