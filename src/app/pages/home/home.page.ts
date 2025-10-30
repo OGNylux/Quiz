@@ -23,4 +23,7 @@ export class HomePage {
   public startQuiz() {
     this.router.navigate(['/quiz']);
   }
+  public loadQuiz() {
+    this.data.loadFromServer();
+  }
 }

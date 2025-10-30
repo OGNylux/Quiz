@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonButtons, IonBackButton, IonButton, IonIcon } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonButtons, IonBackButton, IonButton, IonIcon, IonItemSliding, IonItemOptions, IonItemOption } from '@ionic/angular/standalone';
 import { Data } from 'src/app/services/data';
 import { Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: './question-list.page.html',
   styleUrls: ['./question-list.page.scss'],
   standalone: true,
-  imports: [IonIcon, IonButton, IonBackButton, IonLabel, IonItem, IonList, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons]
+  imports: [IonItemOption, IonItemOptions, IonItemSliding, IonIcon, IonButton, IonBackButton, IonItem, IonList, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons]
 })
 export class QuestionListPage implements OnInit {
   public data = inject(Data);
@@ -28,4 +28,7 @@ export class QuestionListPage implements OnInit {
     //this.data.addSampleQuestions();
   }
 
+  deleteQuestion(id: string) {
+    this.data.deleteQuestion(id);
+  }
 }

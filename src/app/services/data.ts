@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Quiz } from './quiz';
 import { Question } from './question';
 import { v4 as uuidv4 } from 'uuid';
 import { Preferences } from '@capacitor/preferences';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +15,15 @@ export class Data {
     questions: []
   };
 
+  private http = inject(HttpClient);
+
   constructor() {
     this.loadQuiz()
   }
-  
+
   public async loadQuiz() {
     const ret = await Preferences.get({ key: 'it251511_mobile_2025_quiz' });
-    if (ret.value) this.currentQuiz = <Quiz> JSON.parse(ret.value);
+    if (ret.value) this.currentQuiz = <Quiz>JSON.parse(ret.value);
   }
 
   public async saveQuiz() {
@@ -49,7 +52,7 @@ export class Data {
       correct: 1
     };
   }
-  
+
   addQuestion(question: Question) {
     question.id = uuidv4();
     this.currentQuiz.questions.push(question);
@@ -66,15 +69,14 @@ export class Data {
     this.saveQuiz();
   }
 
-  addSampleQuestions() {
-    fetch('assets/questions.json')
-      .then(response => response.json())
-      .then((data: Question[]) => {
-        data.forEach(q => q.id = uuidv4());
-        
-        this.deleteAllQuestions();
-        this.currentQuiz.questions.push(...data);
-        this.saveQuiz();
-      });
+  public loadFromServer() {
+    this.http.get<Quiz>('assets/data.json').subscribe((data: Quiz) => {
+      if (data) {
+        if (data.id && data.quizName) {
+          this.currentQuiz = data;
+          this.saveQuiz();
+        }
+      }
+    });
   }
 }

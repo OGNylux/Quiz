@@ -6,6 +6,7 @@ import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
 import { addIcons } from 'ionicons';
 import { addCircleOutline, checkmark } from 'ionicons/icons';
+import { provideHttpClient } from '@angular/common/http';
 
 addIcons({
   'add-circle-outline': addCircleOutline,
@@ -17,5 +18,6 @@ bootstrapApplication(AppComponent, {
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
     provideRouter(routes, withPreloading(PreloadAllModules)),
+    provideHttpClient()
   ],
 });
