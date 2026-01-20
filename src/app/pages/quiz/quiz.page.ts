@@ -29,6 +29,10 @@ export class QuizPage implements OnInit {
 
   ngOnInit() {
     this.questions = this.data.getAllQuestions();
+    if (this.questions.length === 0) {
+      // No questions available, go back
+      return;
+    }
     this.shuffledQuestions = this.shuffleArray(this.questions);
     this.currentQuestion = this.shuffledQuestions[this.currentIndex];
   }

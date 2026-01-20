@@ -1,22 +1,69 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Quiz App
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Quiz App</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <p>current number of questions {{ data.currentQuiz.questions.length }}</p>
-    <ion-button shape="round" color="primary" expand="block" fill="outline" (click)="showList()">Show questions</ion-button>
-    <ion-button shape="round" color="primary" expand="block" fill="outline" (click)="startQuiz()">Start Quiz</ion-button>
-    <ion-button shape="round" color="danger" expand="block" fill="outline" (click)="loadQuiz()">Load Quiz from Server</ion-button>
+  <div class="quiz-container">
+    <div class="user-info" *ngIf="authService.currentUser$ | async as user">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <span>{{ user.email }}</span>
+    </div>
+    
+    <h2 class="section-title">Available Quizzes</h2>
+    
+    <ion-grid *ngIf="quizzes.length > 0">
+      <ion-row>
+        <ion-col size="12" size-md="6" size-lg="4" *ngFor="let quiz of quizzes">
+          <div class="quiz-box" [attr.data-color]="getRandomColor()" (click)="onQuizClick(quiz)">
+            <div class="quiz-content">
+              <h3>{{ quiz.title }}</h3>
+              <p class="question-count" *ngIf="quiz.questions">
+                {{ quiz.questions.length }} questions
+              </p>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="empty-state" *ngIf="quizzes.length === 0">
+      <ion-icon name="help-circle-outline" class="empty-icon"></ion-icon>
+      <h3>No Quizzes Available</h3>
+      <p>Load quizzes from the backend or create your own!</p>
+      <p class="auth-note">
+        <ion-icon name="information-circle-outline"></ion-icon>
+        Note: Quizzes endpoint requires authentication. Questions are loaded if available.
+      </p>
+    </div>
+
+    <div class="action-buttons">
+      <ion-button expand="block" fill="outline" color="primary" (click)="createNewQuiz()">
+        Create New Quiz
+      </ion-button>
+      <ion-button expand="block" fill="outline" color="secondary" (click)="loadLocalQuiz()">
+        Load Sample Quiz
+      </ion-button>
+      <ion-button expand="block" fill="outline" color="tertiary" (click)="loadFromBackend()">
+        Refresh from Backend
+      </ion-button>
+      <ion-button expand="block" fill="outline" color="success" (click)="syncWithBackend()">
+        Sync Local to Backend
+      </ion-button>
+    </div>
   </div>
 </ion-content>

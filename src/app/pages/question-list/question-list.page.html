@@ -28,7 +28,7 @@
     </ion-item>
   </ion-list> -->
   <ion-list>
-    @for (item of data.currentQuiz.questions; track item.id) {
+    @for (item of data.currentQuiz.questions || []; track item.id) {
     <ion-item-sliding>
       <ion-item (click)="show(item.id)">{{ item.title }}</ion-item>
       <ion-item-options side="end" >

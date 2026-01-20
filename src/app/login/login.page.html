@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="login-container">
+    <div class="logo-section">
+      <ion-icon name="school-outline" class="logo-icon"></ion-icon>
+      <h1>Quiz App</h1>
+      <p>Login to continue</p>
+    </div>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Sign In</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-input
+          label="Email"
+          labelPlacement="floating"
+          type="email"
+          [(ngModel)]="email"
+          [disabled]="isLoading"
+          placeholder="Enter your email">
+        </ion-input>
+
+        <ion-input
+          label="Password"
+          labelPlacement="floating"
+          type="password"
+          [(ngModel)]="password"
+          [disabled]="isLoading"
+          placeholder="Enter your password"
+          class="ion-margin-top">
+        </ion-input>
+
+        <ion-button
+          expand="block"
+          (click)="login()"
+          [disabled]="isLoading"
+          class="ion-margin-top">
+          <ion-spinner *ngIf="isLoading" name="crescent"></ion-spinner>
+          <span *ngIf="!isLoading">Login</span>
+        </ion-button>
+
+        <div class="register-link ion-text-center ion-margin-top">
+          <ion-text color="medium">
+            Don't have an account? 
+            <a routerLink="/register" class="link">Register</a>
+          </ion-text>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
